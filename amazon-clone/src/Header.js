@@ -2,15 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import { useStateValue } from "./StateProvider";
 import "./Header.css";
 
 const Header = () => {
+  const [{ basket }, dispatch] = useStateValue();
+  console.log(basket);
+
   return (
     <nav className='header'>
       <Link to='/'>
         <img
           className='header__logo'
-          src='https://www.pngitem.com/pimgs/m/1-12080_amazon-logo-png-amazon-white-text-logo-transparent.png'
+          src='https://pngimg.com/uploads/amazon/amazon_PNG25.png'
           alt='amazon logo'
         />
       </Link>
@@ -45,7 +49,9 @@ const Header = () => {
         <Link className='header__link' to='/checkout'>
           <div className='header__optionBasket'>
             <ShoppingBasketIcon />
-            <span className='header__optionLineTwo header__basketCount'>o</span>
+            <span className='header__optionLineTwo header__basketCount'>
+              {basket?.length}
+            </span>
           </div>
         </Link>
       </div>
