@@ -2,12 +2,11 @@ export const initialState = {
   basket: [
     {
       id: "12344543",
-      title:
-        "Instant Pot Duo Mini 7-in-1 Electric Pressure Cooker, Sterilizer, Slow Cooker, Rice Cooker, Steamer, Saute, Yogurt Maker, and Warmer",
+      title: "The NEW Blink 4K HD  Security Camera",
       price: 12.99,
       rating: 3,
       image:
-        "https://images-na.ssl-images-amazon.com/images/I/71Vyt-4fD8L._AC_UL200_SR200,200_.jpg",
+        "https://images.homedepot-static.com/productImages/7b5edb1a-feaa-48d1-9543-9805a336bb71/svn/black-blink-smart-security-camera-systems-b07mmz2ltb-64_400.jpg",
     },
   ],
   user: null,
@@ -24,7 +23,20 @@ const reducer = (state, action) => {
       break;
 
     case "REMOVE_FROM_BASKET":
-      //Logic for removing item
+      let newBasket = [...state.basket];
+
+      const index = state.basket.findIndex(
+        (basketItem) => basketItem.id === action.id
+      );
+      if (index >= 0) {
+        newBasket.splice(index, 1);
+      } else {
+        console.warn("Cant remove product");
+      }
+      return {
+        ...state,
+        basket: newBasket,
+      };
       break;
 
     default:
