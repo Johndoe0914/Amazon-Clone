@@ -6,7 +6,7 @@ import { useStateValue } from "./StateProvider";
 import "./Header.css";
 
 const Header = () => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
 
   return (
     <nav className='header'>
@@ -26,7 +26,7 @@ const Header = () => {
       <div className='header__nav'>
         <Link className='header__link' to='/login'>
           <div className='header__option'>
-            <span className='header__optionLineOne'> hello johhny</span>
+            <span className='header__optionLineOne'> hello user</span>
             <span className='header__optionLineTwo'>Sign in</span>
           </div>
         </Link>
