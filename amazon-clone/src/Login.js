@@ -15,8 +15,6 @@ const Login = () => {
       .then((auth) => {
         //loged in redirect
         history.push("/");
-
-        console.log(auth);
       })
       .catch((e) => alert(e.message));
   };
@@ -31,14 +29,13 @@ const Login = () => {
       })
       .catch((e) => alert(e.message));
   };
-  console.log("email", email);
-  console.log("password", password);
+
   return (
     <div className='login'>
       <Link to='/'>
         <img
           className='login__logo'
-          src='https://pngimg.com/uploads/amazon/amazon_PNG13.png'
+          src='https://cdn2.downdetector.com/static/uploads/logo/amazon.png'
           alt=''
         />
       </Link>

@@ -38,8 +38,9 @@
 .login__logo {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 100px;
+  width: 300px;
   object-fit: contain;
+  margin: 75px;
 }
 
 .login__signInButton {

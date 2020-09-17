@@ -13,5 +13,6 @@
 
 .checkout__ad {
   width: 100%;
+  max-height: 250px;
   margin-bottom: 10px;
 }

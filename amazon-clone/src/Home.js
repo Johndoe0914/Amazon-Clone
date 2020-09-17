@@ -36,7 +36,7 @@ const Home = () => {
           image='https://images-na.ssl-images-amazon.com/images/I/71Vyt-4fD8L._AC_UL200_SR200,200_.jpg'
         />
         <Product
-          id={12344543}
+          id={12334543}
           title='Apple MacBook Air (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray (Latest Model)'
           price={12.99}
           rating={3}
