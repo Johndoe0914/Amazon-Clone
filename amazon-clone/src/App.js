@@ -5,6 +5,7 @@ import Home from "./Home";
 import Checkout from "./Checkout";
 import Login from "./Login";
 import Payment from "./Payment";
+import Orders from "./Orders";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 import { loadStripe } from "@stripe/stripe-js";
@@ -39,13 +40,14 @@ const App = () => {
     };
   }, []);
 
-  console.log("user is =>>", user);
+  // console.log("user is =>>", user);
   return (
     <Router>
       <div className='app'>
         <Header />
         <Switch>
           <Route path='/' exact component={Home} />
+          <Route path='/orders' exact component={Orders} />
           <Route path='/login' exact component={Login} />
           <Route path='/checkout' exact component={Checkout} />
           <Elements stripe={promise}>

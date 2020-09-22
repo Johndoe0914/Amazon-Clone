@@ -1,14 +1,5 @@
 export const initialState = {
-  basket: [
-    {
-      id: "12344543",
-      title: "The NEW Blink 4K HD  Security Camera",
-      price: 12.99,
-      rating: 3,
-      image:
-        "https://images.homedepot-static.com/productImages/7b5edb1a-feaa-48d1-9543-9805a336bb71/svn/black-blink-smart-security-camera-systems-b07mmz2ltb-64_400.jpg",
-    },
-  ],
+  basket: [],
   user: null,
 };
 
@@ -28,6 +19,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         basket: [...state.basket, action.item],
+      };
+    case "EMPTY_BASKET":
+      return {
+        ...state,
+        basket: [],
       };
 
     case "REMOVE_FROM_BASKET":

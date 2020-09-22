@@ -47,7 +47,7 @@ const Header = () => {
           </div>
         </Link>
 
-        <Link className='header__link' to='/n'>
+        <Link className='header__link' to={!user ? "/login" : "/orders"}>
           <div className='header__option'>
             <span className='header__optionLineOne'>Returns</span>
             <span className='header__optionLineTwo'>& Orders</span>
