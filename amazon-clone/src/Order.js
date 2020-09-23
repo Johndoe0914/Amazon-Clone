@@ -24,6 +24,7 @@ const Order = ({ order }) => {
           hideButton
         />
       ))}
+
       <CurrencyFormat
         renderText={(value) => (
           <h3 className='order__total'>Order total: {value}</h3>

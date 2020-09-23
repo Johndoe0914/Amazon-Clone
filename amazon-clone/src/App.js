@@ -47,8 +47,9 @@ const App = () => {
         <Header />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/orders' exact component={Orders} />
+
           <Route path='/login' exact component={Login} />
+          <Route path='/orders' exact component={Orders} />
           <Route path='/checkout' exact component={Checkout} />
           <Elements stripe={promise}>
             <Route path='/payment' exact component={Payment} />
