@@ -1,3 +1,19 @@
+Link: https://clone-42d37.web.app/
+
+AMAZON CLONE
+
+Users can add items and delete items from the basket, Has user authentication with firebase ,
+Users can succesfully checkout with stripe payments, Aswell as view their orders on the order page only available once signed in.
+
+BUILT WITH
+- ReactJS
+- React Context API
+- Firebase
+- Hooks
+- ES6
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
